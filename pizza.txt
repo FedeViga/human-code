@@ -48,7 +48,7 @@
 - Recensisco Pizzeria
   ? SE consegna entro trenta minuti AND Pizza Buona
     - 5 stelle
-  ? SE consegna entro trenta minuti OR Pizza Buona
+  ? ALTRIMENTI SE consegna entro trenta minuti OR Pizza Buona
     - 3 stelle
   : ALTRIMENTI
     - 1 stella
