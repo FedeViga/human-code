@@ -1,0 +1,54 @@
+- Cerco la pizzeria su Tripadvisor
+  FINCHÉ seleziono la pizzeria
+  - Controllo Prossima pizzeria
+	? SE la pizzeria ha 4.5 stelle
+		? SE prezzo minore di 7 euro
+			? SE consegna entro trenta minuti
+	    		  - Seleziono la pizzeria
+	: ALTRIMENTI
+	  - Controlla prossima pizzeria
+
+  ? SE pizzeria non trovata dopo 5 tentativi
+  	: FINCHÉ seleziono la pizzeria
+  	  - Cerco pizzeria con valutazione - 0.5 stelle, prezzo + 1 euro, tempo + 10 minuti
+
+
+- Seleziono la pizza
+  ? SE mi sento felice
+    - Scelgo prosciutto e funghi
+  : ALTRIMENTI
+    - Scelgo una marinara triste
+
+- Specifico l'indirizzo della consegna
+
+- Pago la pizza
+  ? SE la pizzeria accetta Paypal
+    - Pago con Paypal
+  : ALTRIMENTI SE la pizzeria accetta Carte
+    - Pago con Carta
+  : ALTRIMENTI 
+    - Pago con Contanti alla consegna
+
+
+- Attendo la consegna
+  ? SE pizza viene consegnata
+    - Ritiro la pizza
+  	? SE la pizza è consegnata entro trenta minuti
+  	- Do la mancia al fattorino
+    - Mangio la pizza
+      ? SE mangio tutta la pizza
+        - Butto via il cartone
+      : ALTRIMENTI
+        - Metto il cartone con gli avanzi dentro il frigo
+
+  : ALTRIMENTI
+  ? SE pizza non consegnata dopo 60 minuti
+    - Chiamo Assistenza
+
+- Recensisco Pizzeria
+  ? SE consegna entro trenta minuti AND Pizza Buona
+    - 5 stelle
+  ? SE consegna entro trenta minuti OR Pizza Buona
+    - 3 stelle
+  : ALTRIMENTI
+    - 1 stella
